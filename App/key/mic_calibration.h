@@ -1,0 +1,16 @@
+#ifndef __MIC_CALIBRATION_H__
+#define __MIC_CALIBRATION_H__
+
+#include "application.h"
+
+#define CFG_PIN_CALIBRATION_PORT    GPIO_GroupA
+#define CFG_PIN_CALIBRATION_PINNUM  GPIO_Pin_0
+
+#define CALIBRATION_MODE_ENTER_PIN_LEVEL  PLIB_HIGH
+
+#define ENTRY_CALIBRATION_MODE	(CALIBRATION_MODE_ENTER_PIN_LEVEL == plib_gpio_get_value(CFG_PIN_CALIBRATION_PORT, CFG_PIN_CALIBRATION_PINNUM))
+
+
+
+void calibration_text(void);
+#endif
